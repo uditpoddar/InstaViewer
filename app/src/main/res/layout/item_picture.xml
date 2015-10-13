@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent" android:paddingTop="10dip">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/ivUserThumb"
+        android:scaleType="fitCenter"
+        android:padding="10dip"
+        app:riv_corner_radius="20dip"
+        app:riv_border_width="0dip"
+        app:riv_mutate_background="true"
+        app:riv_oval="true"
+        android:layout_width="@dimen/user_thumb_dia"
+        android:layout_height="@dimen/user_thumb_dia"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:text="username"
+        android:id="@+id/tvUsername"
+        android:layout_alignParentTop="true"
+        android:layout_alignBottom="@id/ivUserThumb"
+        android:layout_toRightOf="@+id/ivUserThumb"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:text="timestamp"
+        android:id="@+id/tvRelativeTS"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignBottom="@id/ivUserThumb"
+        android:paddingRight="20dip"/>
+
+    <ImageView
+        android:layout_width="@dimen/relative_time_icon_dia"
+        android:layout_height="@dimen/relative_time_icon_dia"
+        android:src="@android:drawable/ic_menu_recent_history"
+        android:id="@+id/ivRelativeTSIcon"
+        android:layout_toLeftOf="@id/tvRelativeTS"
+        android:layout_alignParentTop="true"
+        android:layout_alignBottom="@id/ivUserThumb"
+        android:layout_centerHorizontal="true" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        android:adjustViewBounds="true"
+        android:id="@+id/ivPicture"
+        android:layout_below="@+id/tvUsername"
+        android:layout_centerHorizontal="true" />
+
+    <VideoView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:id="@+id/vvPicture"
+        android:layout_below="@+id/tvUsername"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvCaption"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/ivPicture"
+        android:gravity="center" />
+
+    <ImageView
+        android:layout_width="@dimen/relative_time_icon_dia"
+        android:layout_height="@dimen/relative_time_icon_dia"
+        android:src="@android:drawable/btn_star_big_on"
+        android:id="@+id/ivLikesIcon"
+        android:layout_alignLeft="@id/tvCaption"
+        android:layout_below="@id/tvCaption"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvLikeCount"
+        android:layout_toRightOf="@id/ivLikesIcon"
+        android:layout_below="@id/tvCaption"
+        android:gravity="center" />
+
+
+</RelativeLayout>

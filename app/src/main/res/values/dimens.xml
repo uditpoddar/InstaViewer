@@ -1,0 +1,7 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="user_thumb_dia">60dp</dimen>
+    <dimen name="relative_time_icon_dia">17dp</dimen>
+</resources>
